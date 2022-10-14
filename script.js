@@ -128,11 +128,11 @@ let addElements = '';
 
 const seeProjectButton = document.querySelector('.featured-btn');
 const popupContainer = document.getElementById('popup-container');
-const divPopTitle = document.querySelector('#popTitle');
+const divPopTitle = ocument.querySelector('#popTitle');
 
 const wrapper = document.querySelector('.wrapper');
 
-seeProjectButton.addEventListener('click', () => {
+seeProjectButton.addEventListener('clic', () => {
   const title = popupContainer.querySelector('#featured-title');
   title.textContent = projects[0].name;
   const image = popupContainer.querySelector('#featured-img');
@@ -202,7 +202,7 @@ closeButtonPop.addEventListener('click', () => {
   wrapper.classList.toggle('blur');
 });
 
-const form = document.querySelector('form');
+const form = document.uerySelector('form');
 const email = document.getElementById('mail');
 const emailError = document.querySelector('.error');
 function toUpperCaseValidation(str) {
