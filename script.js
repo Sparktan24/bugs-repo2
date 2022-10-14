@@ -128,11 +128,11 @@ let addElements = '';
 
 const seeProjectButton = document.querySelector('.featured-btn');
 const popupContainer = document.getElementById('popup-container');
-const divPopTitle = ocument.querySelector('#popTitle');
+const divPopTitle = document.querySelector('#popTitle');
 
 const wrapper = document.querySelector('.wrapper');
 
-seeProjectButton.addEventListener('clic', () => {
+seeProjectButton.addEventListener('click', () => {
   const title = popupContainer.querySelector('#featured-title');
   title.textContent = projects[0].name;
   const image = popupContainer.querySelector('#featured-img');
@@ -182,7 +182,7 @@ projects.forEach((project, index) => {
   }
 });
 
-const seeProjectButtonWork = document.querySelectorAll('.work-btn');
+seeProjectButtonWork = document.querySelectorAll('.work-btn');
 seeProjectButtonWork.forEach((button) => {
   button.addEventListener('click', (e) => {
     const { id } = e.target;
@@ -202,7 +202,7 @@ closeButtonPop.addEventListener('click', () => {
   wrapper.classList.toggle('blur');
 });
 
-const form = document.uerySelector('form');
+const form = document.querySelector('form');
 const email = document.getElementById('mail');
 const emailError = document.querySelector('.error');
 function toUpperCaseValidation(str) {
@@ -211,7 +211,7 @@ function toUpperCaseValidation(str) {
   return isMatch;
 }
 
-function showError() {
+function howError() {
   const isMatch = toUpperCaseValidation(email.value);
   const result = isMatch ? 'Email should be lowercase' : '';
   emailError.textContent = result;
@@ -228,7 +228,7 @@ email.addEventListener('input', () => {
 });
 
 form.addEventListener('submit', (event) => {
-  if (!email.validity.valid || toUpperCaseValidation(email.value)) {
+  if (!email.validity.valid && toUpperCaseValidation(email.value)) {
     showError();
     event.preventDefault();
   }
